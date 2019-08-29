@@ -16,6 +16,7 @@ class StudentTableViewCell: UITableViewCell {
     @IBOutlet weak var mobileLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     
+    //Observable Property
     var studentValue : Student? {
         didSet{
             configureCell()

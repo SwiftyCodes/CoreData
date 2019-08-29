@@ -18,7 +18,7 @@ class DatabaseHelper {
     private init(){}
     
     //MARK: Create
-    func create(objectOf object: [String:Any]) {
+    func create(objectOf object: [String:Any]) -> Bool {
         let studentObject = NSEntityDescription.insertNewObject(forEntityName: "Student", into: context!) as! Student
         studentObject.name = object["name"] as? String
         studentObject.age = Int16(object["age"] as! Int)
@@ -28,10 +28,13 @@ class DatabaseHelper {
         do{
             try context?.save()
             print("Data Saved Successfully")
+            return true
         }catch{
             print("Error saving data")
+            return false
         }
     }
+    
     
     //MARK: Create
     func fetchDataFromEntity(fromEntity entity: String) -> [NSManagedObject] {
@@ -45,9 +48,21 @@ class DatabaseHelper {
         return allStudent
     }
     
-    //MARK: Delete
-    func delete(objectOf object: [String:String]) {
+    //MARK: Delete from Index
+    func delete(atIndex index: Int) -> [NSManagedObject] {
         
+        var allStudent = fetchDataFromEntity(fromEntity: "Student")
+        context?.delete(allStudent[index]) // Remove data from Entity
+        allStudent.remove(at: index) // Remove data from Array
+        
+        do{
+            try context?.save()
+            print("Data Saved Successfully")
+        }catch{
+            print("Error Deleting data")
+        }
+        
+        return allStudent
     }
     
     //MARK: Update

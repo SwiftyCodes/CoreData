@@ -138,16 +138,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="9Y0-Vg-fTa">
-                                    <rect key="frame" x="0.0" y="155" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="153" width="375" height="1"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentTableViewCell" rowHeight="127" id="vtJ-uo-ahY" customClass="StudentTableViewCell" customModule="CoreDataProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="127"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentTableViewCell" rowHeight="125" id="vtJ-uo-ahY" customClass="StudentTableViewCell" customModule="CoreDataProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vtJ-uo-ahY" id="WQR-Se-5Kf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="126.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybk-Cz-5pM">
@@ -209,8 +209,6 @@
                                                 <constraint firstItem="zvS-Zu-xnn" firstAttribute="leading" secondItem="WQR-Se-5Kf" secondAttribute="leadingMargin" id="bZG-Qd-Tf7"/>
                                                 <constraint firstItem="c3h-Fe-gQY" firstAttribute="top" secondItem="zvS-Zu-xnn" secondAttribute="bottom" constant="8" id="dzc-mg-ZDj"/>
                                                 <constraint firstItem="c3h-Fe-gQY" firstAttribute="leading" secondItem="WQR-Se-5Kf" secondAttribute="leading" constant="15" id="f4J-ze-gbW"/>
-                                                <constraint firstAttribute="bottom" secondItem="c3h-Fe-gQY" secondAttribute="bottom" constant="7.5" id="mQ3-ub-QOm"/>
-                                                <constraint firstAttribute="bottom" secondItem="SeG-Oq-4pk" secondAttribute="bottom" constant="7.5" id="nzl-Gz-EEj"/>
                                                 <constraint firstItem="Ybk-Cz-5pM" firstAttribute="leading" secondItem="WQR-Se-5Kf" secondAttribute="leadingMargin" id="qAQ-d6-z67"/>
                                                 <constraint firstItem="SeG-Oq-4pk" firstAttribute="top" secondItem="lWn-LY-DMJ" secondAttribute="bottom" constant="8" id="s57-h1-CYQ"/>
                                                 <constraint firstItem="KZD-Yf-DDo" firstAttribute="top" secondItem="wQk-ql-1iW" secondAttribute="bottom" constant="8" id="utk-G5-Q0c"/>

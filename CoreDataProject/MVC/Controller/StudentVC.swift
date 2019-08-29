@@ -31,12 +31,25 @@ class StudentVC: UIViewController {
         let age = Int(ageTF.text!)
         guard let studentName = nameTF.text, let studentAge = age, let studentMobileNo = mobileTF.text, let studemtCity = cityTF.text else {print("Please fill all details for the student"); return}
         let studentDict = ["name":studentName,"age":studentAge,"number":studentMobileNo,"city":studemtCity] as [String : Any]
-        DatabaseHelper.sharedInstance.create(objectOf: studentDict)
+        if DatabaseHelper.sharedInstance.create(objectOf: studentDict) {
+            clearTexfields()
+        }
     }
     
     
     @IBAction func showStudentList(_ sender : UIButton) {
         performSegue(withIdentifier: "goToStudentListVC", sender: nil)
+        clearTexfields()
     }
 }
 
+
+extension StudentVC {
+    
+    func clearTexfields() {
+        nameTF.text = ""
+        ageTF.text = ""
+        mobileTF.text = ""
+        cityTF.text = ""
+    }
+}

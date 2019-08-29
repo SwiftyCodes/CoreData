@@ -66,7 +66,15 @@ class DatabaseHelper {
     }
     
     //MARK: Update
-    func update(objectOf object: [String:String]) {
+    func update(objectOf object: Student, atIndex i: Int) {
+        var allStudent = fetchDataFromEntity(fromEntity: "Student") as! [Student]
+        allStudent[i] = object
+        do{
+            try context?.save()
+            print("Data Edited Successfully")
+        }catch{
+            print("Error Editing data")
+        }
         
     }
 }

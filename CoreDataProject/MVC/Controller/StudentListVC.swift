@@ -12,8 +12,9 @@ import  CoreData
 class StudentListVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var studentListArray : [NSManagedObject] = []
     
+    var studentListArray : [NSManagedObject] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         studentListArray = DatabaseHelper.sharedInstance.fetchDataFromEntity(fromEntity: "Student")
@@ -61,5 +62,22 @@ extension StudentListVC : UITableViewDelegate {
         default:
             break
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopUpViewController") as! PopUpViewController
+        popOverVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        popOverVC.studentValue = studentListArray[indexPath.row] as? Student
+        popOverVC.row = indexPath.row
+        popOverVC.delegate = self
+        self.present(popOverVC, animated: true)
+    }
+}
+
+extension StudentListVC : PopUpViewControllerDelegate {
+    func studentDataPassBack(studentData: Student, row: Int) {
+        studentListArray.remove(at: row)
+        studentListArray.insert(studentData, at: row)
+        tableView.reloadData()
     }
 }

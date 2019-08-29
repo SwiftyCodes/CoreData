@@ -21,6 +21,9 @@
 		7519A72A2317DF9000229D5F /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7519A7292317DF9000229D5F /* DatabaseHelper.swift */; };
 		7519A72C2317F0EC00229D5F /* StudentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7519A72B2317F0EC00229D5F /* StudentListVC.swift */; };
 		7519A7312317F13C00229D5F /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7519A7302317F13C00229D5F /* StudentTableViewCell.swift */; };
+		7519A734231804FF00229D5F /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7519A733231804FF00229D5F /* CustomView.xib */; };
+		7519A7372318120B00229D5F /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7519A7362318120B00229D5F /* CustomView.swift */; };
+		754E105D23182296004D044E /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E105C23182296004D044E /* PopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		7519A7292317DF9000229D5F /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		7519A72B2317F0EC00229D5F /* StudentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListVC.swift; sourceTree = "<group>"; };
 		7519A7302317F13C00229D5F /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
+		7519A733231804FF00229D5F /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		7519A7362318120B00229D5F /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		754E105C23182296004D044E /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +197,7 @@
 			children = (
 				7519A6EF2317D65D00229D5F /* StudentVC.swift */,
 				7519A72B2317F0EC00229D5F /* StudentListVC.swift */,
+				754E105C23182296004D044E /* PopUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,7 +205,8 @@
 		7519A72E2317F11A00229D5F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7519A7302317F13C00229D5F /* StudentTableViewCell.swift */,
+				7519A7352318050800229D5F /* Student Cell */,
+				7519A732231804DF00229D5F /* Custom View */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +217,23 @@
 				7519A71F2317D7C900229D5F /* Entity Model */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7519A732231804DF00229D5F /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				7519A733231804FF00229D5F /* CustomView.xib */,
+				7519A7362318120B00229D5F /* CustomView.swift */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		7519A7352318050800229D5F /* Student Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7519A7302317F13C00229D5F /* StudentTableViewCell.swift */,
+			);
+			path = "Student Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7519A6FB2317D65E00229D5F /* LaunchScreen.storyboard in Resources */,
+				7519A734231804FF00229D5F /* CustomView.xib in Resources */,
 				7519A6F82317D65E00229D5F /* Assets.xcassets in Resources */,
 				7519A6F32317D65D00229D5F /* Main.storyboard in Resources */,
 			);
@@ -345,7 +371,9 @@
 				7519A6F02317D65D00229D5F /* StudentVC.swift in Sources */,
 				7519A7222317D82500229D5F /* Student+CoreDataClass.swift in Sources */,
 				7519A72C2317F0EC00229D5F /* StudentListVC.swift in Sources */,
+				7519A7372318120B00229D5F /* CustomView.swift in Sources */,
 				7519A6EE2317D65D00229D5F /* AppDelegate.swift in Sources */,
+				754E105D23182296004D044E /* PopUpViewController.swift in Sources */,
 				7519A6F62317D65D00229D5F /* CoreDataProject.xcdatamodeld in Sources */,
 				7519A72A2317DF9000229D5F /* DatabaseHelper.swift in Sources */,
 				7519A7232317D82500229D5F /* Student+CoreDataProperties.swift in Sources */,

@@ -34,6 +34,7 @@ class StudentVC: UIViewController {
         if DatabaseHelper.sharedInstance.create(objectOf: studentDict) {
             clearTexfields()
         }
+ 
     }
     
     

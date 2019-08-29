@@ -13,7 +13,6 @@
         <!--StudentVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="StudentVC" customModule="CoreDataProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -123,6 +122,7 @@
                         <segue destination="2cS-o2-oJr" kind="show" identifier="goToStudentListVC" id="ups-zE-nbY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1135" y="35"/>
         </scene>
@@ -143,7 +143,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentTableViewCell" rowHeight="125" id="vtJ-uo-ahY" customClass="StudentTableViewCell" customModule="CoreDataProject" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StudentTableViewCell" rowHeight="125" id="vtJ-uo-ahY" customClass="StudentTableViewCell" customModule="CoreDataProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vtJ-uo-ahY" id="WQR-Se-5Kf">
@@ -249,6 +249,142 @@
             </objects>
             <point key="canvasLocation" x="1768.8" y="34.632683658170919"/>
         </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="H08-xk-Qvf">
+            <objects>
+                <viewController storyboardIdentifier="PopUpViewController" id="Imb-Pa-yyr" customClass="PopUpViewController" customModule="CoreDataProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Bm-lZ-XtO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abd-wC-o24">
+                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sXE-ed-91W">
+                                        <rect key="frame" x="10" y="33" width="280" height="233"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vxj-gD-KCe">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="8rR-Ty-ye4"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dV0-ed-1Uw">
+                                                <rect key="frame" x="0.0" y="48" width="280" height="40"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GCZ-Ka-Sf9">
+                                                <rect key="frame" x="0.0" y="96" width="280" height="40"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wtd-Ij-00s">
+                                                <rect key="frame" x="0.0" y="144" width="280" height="40"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cb2-Tp-sEA">
+                                                <rect key="frame" x="0.0" y="192" width="280" height="41"/>
+                                                <color key="backgroundColor" red="0.27058823529999998" green="0.5568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                                <state key="normal" title="Update">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="UpdateButtonAction:" destination="Imb-Pa-yyr" eventType="touchUpInside" id="Bqk-vK-hBM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="GCZ-Ka-Sf9" firstAttribute="height" secondItem="dV0-ed-1Uw" secondAttribute="height" id="S7K-dQ-zy7"/>
+                                            <constraint firstItem="dV0-ed-1Uw" firstAttribute="height" secondItem="vxj-gD-KCe" secondAttribute="height" id="Xb0-Vc-NYv"/>
+                                            <constraint firstItem="Wtd-Ij-00s" firstAttribute="height" secondItem="GCZ-Ka-Sf9" secondAttribute="height" id="nvo-DU-6J0"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="sXE-ed-91W" secondAttribute="bottom" constant="34" id="79s-rQ-nAJ"/>
+                                    <constraint firstAttribute="width" constant="300" id="ENZ-BQ-yGl"/>
+                                    <constraint firstItem="sXE-ed-91W" firstAttribute="leading" secondItem="abd-wC-o24" secondAttribute="leading" constant="10" id="ODc-0s-IbD"/>
+                                    <constraint firstAttribute="height" constant="300" id="Vuy-Eo-Njm"/>
+                                    <constraint firstAttribute="trailing" secondItem="sXE-ed-91W" secondAttribute="trailing" constant="10" id="im7-Es-55v"/>
+                                    <constraint firstAttribute="trailing" secondItem="sXE-ed-91W" secondAttribute="trailing" constant="10" id="rfB-yg-yaN"/>
+                                    <constraint firstItem="sXE-ed-91W" firstAttribute="leading" secondItem="abd-wC-o24" secondAttribute="leading" constant="10" id="yG9-5U-kjp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Student" translatesAutoresizingMaskIntoConstraints="NO" id="5Ac-gP-a2w">
+                                <rect key="frame" x="157" y="158" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="7Bi-4G-xL9"/>
+                                    <constraint firstAttribute="height" constant="50" id="oef-OE-7cC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RJ-GP-h15">
+                                <rect key="frame" x="320" y="168" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="dln-KO-Ckc"/>
+                                    <constraint firstAttribute="height" constant="30" id="ieU-ge-Qz5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeButton:" destination="Imb-Pa-yyr" eventType="touchUpInside" id="AiD-S0-KAo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="0.69921875" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sXE-ed-91W" firstAttribute="top" secondItem="8RJ-GP-h15" secondAttribute="bottom" constant="18.5" id="4R1-id-Ncu"/>
+                            <constraint firstItem="abd-wC-o24" firstAttribute="centerY" secondItem="3Bm-lZ-XtO" secondAttribute="centerY" id="Dvk-Hx-2HO"/>
+                            <constraint firstItem="abd-wC-o24" firstAttribute="centerX" secondItem="3Bm-lZ-XtO" secondAttribute="centerX" id="LIa-xX-Nlu"/>
+                            <constraint firstItem="5Ac-gP-a2w" firstAttribute="centerX" secondItem="abd-wC-o24" secondAttribute="centerX" constant="-5.5" id="in3-nE-Isk"/>
+                            <constraint firstItem="abd-wC-o24" firstAttribute="top" secondItem="5Ac-gP-a2w" secondAttribute="bottom" constant="-24.5" id="tMH-Fp-w6m"/>
+                            <constraint firstItem="8RJ-GP-h15" firstAttribute="leading" secondItem="5Ac-gP-a2w" secondAttribute="trailing" constant="113" id="xmj-kS-sJH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uce-Cg-BFt"/>
+                    </view>
+                    <connections>
+                        <outlet property="ageTF" destination="dV0-ed-1Uw" id="XZP-Fm-GyC"/>
+                        <outlet property="cityTF" destination="Wtd-Ij-00s" id="hwC-lU-iHz"/>
+                        <outlet property="mobileTF" destination="GCZ-Ka-Sf9" id="vjQ-AP-4pw"/>
+                        <outlet property="nameTF" destination="vxj-gD-KCe" id="9JP-0I-yMh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSW-Ng-cmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2424.8000000000002" y="34.632683658170919"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="xHp-xt-hIq">
             <objects>
@@ -268,4 +404,7 @@
             <point key="canvasLocation" x="508" y="34.632683658170919"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Student" width="318" height="159"/>
+    </resources>
 </document>
